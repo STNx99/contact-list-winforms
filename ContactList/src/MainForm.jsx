@@ -1,17 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import AddContactForm from "./AddContactForm";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [show, setShow] = useState(false);
   return (
     <div>
       <label>Danh Sach lien he</label>
-      <button>Them lien he</button>
+      <button
+        onClick={() => {
+          setShow(true);
+        }}
+      >
+        Them lien he
+      </button>
+      {show && <AddContactForm />}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
