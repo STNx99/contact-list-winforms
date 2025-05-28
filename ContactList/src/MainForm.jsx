@@ -2,7 +2,6 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import AddContactForm from "./AddContactForm";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -16,7 +15,6 @@ function App() {
       >
         Them lien he
       </button>
-      {show && <AddContactForm />}
     </div>
   );
 }
